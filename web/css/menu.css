@@ -1,0 +1,149 @@
+ /* The side navigation menu */
+ 
+        .sidenav {
+            height: 100%; /* 100% Full-height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            
+            top: 0;
+            right: -10px;
+            background-color: rgba(184, 225, 213, 0.4);
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */	
+            z-index: 3000; /* Stay on top */
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s
+        }
+		
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover, .offcanvas a:focus{
+            color: #ffffff;
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+            position: absolute;
+            top: -12px;
+            left: -70px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* Style page content - use this if you want to push the page content
+        to the right when you open the side navigation */
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        /* On smaller screens, where height is less than 450px,
+	change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+        
+        #header{
+                background: rgba(242, 250, 249, 0.6);
+                color: #9eafba;
+                cursor: default;
+                height: 3.25em;
+                left: 0;
+                line-height: 3.25em;
+                position: fixed;
+                text-align: right;
+                top: 0;
+                width: 100%;
+                z-index: 1000;              
+        }
+        
+        /* logo header*/
+        #header > h1{
+            color: #9eafba;
+            display: inline-block;
+            height: inherit;
+            left: 1.25em;
+            line-height: inherit;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+        }
+        /* logo anchor */
+        #header  h1 a {            
+            font-size: 0.9em;
+            text-decoration: none;
+            color: #9eafba;
+        }
+        /* Menu toggle button*/
+        #menu-button{
+            font-size: 20px;
+            cursor:pointer;
+            position:fixed;
+            top:0; right:10px;
+        }
+
+        /* some settings for dropdown-menu */
+        .nav li.menu-items {
+                padding:0;
+                margin: 0;
+        }
+        
+        .nav li.menu-items a {
+
+            background-color:transparent;
+        }
+
+        .right-carret{
+
+                position: absolute;
+                left: 211px;
+                top: 28px;
+        }
+			
+	.dropdown-menu {
+
+                    background-color: rgba(227, 227, 227, 0.9);
+                    padding-left:0;
+                    padding: 0 10px;
+                    margin-left: 8px;
+        }
+		
+	.dropdown-menu .divider{
+		background-color: #939594;
+	}
+
+        .sidenav li.menu-items a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s
+        }
+		.sidenav ul.nav li.menu-items a:hover, .offcanvas li.menu-items  a:focus{
+            color: #ffffff;
+			padding: 10px 16px;
+        }
+		.sidenav ul.nav li.dropdown ul.dropdown-menu li a {
+            padding: 0 20px;
+            text-decoration: none;
+            font-size: 20px;            
+            display: block;
+            transition: 0.3s
+        }
+
+		.sidenav ul.nav li.dropdown ul.dropdown-menu li a:hover, .offcanvas li.dropdown ul.dropdown-menu li a:focus{
+            color: #ffffff;
+			padding: 7px 5px;
+        }

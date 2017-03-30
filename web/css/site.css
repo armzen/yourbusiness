@@ -1,0 +1,181 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+    z-index: -10; /* for menu view*/
+}
+
+.footer {
+    height: 60px;
+    padding-top: 20px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+
+/* my css */
+/* --------------- */
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+    background-image: url(/images/city_head.jpg);
+    background-size: cover;
+    background-position: left 83%;
+    margin: 51px 0 0;
+    height: 200px;
+    -webkit-filter: brightness(110%);
+    filter: brightness(110%);
+    -webkit-filter: blur(0.5px);
+    filter: blur(0.5px);
+}
+
+.jumbotron h1, .jumbo-p{
+    color: white;
+}
+
+/* all pages */
+.lang-bar{
+    position: absolute;
+    top: 56px;
+    right: 14px;
+    z-index: 1000;
+}
+.lang-bar a {	
+	color:rgba(108, 128, 124, 0.58);
+	font-weight: 700;
+	text-decoration:none;
+	transition: color 0.4s;
+}
+.lang-bar a:hover{
+	color: #d9d9d9;
+	text-decoration:none;
+
+}
+
+#w0{
+    z-index: 900;
+}
+
+
+@media(max-width:768px) {
+    .lang-bar{
+        position: absolute;
+        top: 46px;
+        right: 12px;
+        z-index: 1000;
+    }
+}
+
+/* for $content var */
+#layout-wrap {
+    margin-top: 70px;
+}
+section#contact {
+    padding-top: 33px;
+    padding-bottom:80px;
+}
+
+.mapping{
+    padding: 1px;
+    border: 2px solid #dedede;
+    border-radius: 6px;
+}

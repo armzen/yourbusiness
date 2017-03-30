@@ -1,0 +1,21 @@
+
+/* Scrolling by section ID */
+
+body 
+{
+    width: 100%;
+    height: 100%;
+}
+
+html 
+{
+    width: 100%;
+    height: 100%;
+}	
+section
+{
+	height: 100%;
+	padding-top: 50px;
+	text-align: center;
+}
+
