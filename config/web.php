@@ -6,6 +6,8 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'layout' => 'home',
+    'defaultRoute' => 'home',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -19,7 +21,7 @@ $config = [
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'home/error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -38,14 +40,46 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => true,
             'rules' => [
+                [
+                    'pattern' => '',
+                    'route' => 'home/index',
+                    'suffix' => '',
+                ],
+
+                [
+                    'pattern' => '<controller>/<lng:\d+>',
+                    'route' => '<controller>/view',
+                    'suffix' => '',
+                ],
+
+                [
+                    'pattern' => '<controller>/<action>/<lng:\d+>',
+                    'route' => '<controller>/<action>',
+                    'suffix' => '',
+                ],
+
+                [
+                    'pattern' => '<controller>/<action>',
+                    'route' => '<controller>/<action>',
+                    'suffix' => '',
+                ],
+
+                [
+                    'pattern' => '<controller>/< #:\w+>',
+                    'route' => '<controller>/#',
+                    'suffix' => '',
+                ],
+
+
             ],
         ],
-        */
+
     ],
     'params' => $params,
 ];

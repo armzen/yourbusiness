@@ -1,9 +1,11 @@
 <?php
+/* @var $this yii\web\View */
 use yii\helpers\Url;
 ?>
 
+    <h1>marketing/index</h1>
 <div>
-    <ul class="marketing-menu">                                
+    <ul class="Marketing-menu">
         <li>
             <a href="<?= Url::to(['site/marketing-web', 'lng' => $lng]) ?>">
                 <?= $mkmenu[0]["mklink1"]; ?>
@@ -22,9 +24,6 @@ use yii\helpers\Url;
     </ul>
 </div>
 
-<?php
-    echo '<pre>';
-        var_dump($mkmenu);
-    echo '</pre>';
-?>
-
+<p>
+    the file <code><?= __FILE__; ?></code>.
+</p>

@@ -12,13 +12,8 @@ use app\models\TrainingMenu;
 use app\models\MarketingMenu;
 use app\models\Slider;
 
-use app\models\Contacts;
-
-class SiteController extends Controller
+class HomeController extends Controller
 {
-
-    //public $layout = 'main';
-
     public function behaviors()
     {
         return [
@@ -55,19 +50,19 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionIndex( $lng = 1)
+    public function actionIndex($lng = 1)
     {
 
-        $this->layout = 'site-layout';
+        $this->layout = 'home-layout';
 
         $trmenu = TrainingMenu::getTrainingMenuItems($lng);
         $read_more = TrainingMenu::btnTranslate($lng);
-        
+
         $mkmenu = MarketingMenu::getMarketingMenuItems($lng);
         $slider = Slider::getAllitems($lng);
 
 
-       
+
         return $this->render('index',
             [
                 'trmenu' => $trmenu,
@@ -78,59 +73,7 @@ class SiteController extends Controller
             ]);
     }
 
-    
-/*
-    // Trainig Main page
-    public function actionTraining($lng)
-    {
-        $trmenu = TrainingMenu::getTrainingMenuItems($lng);
-        return $this->render('training', ['lng' => $lng,'trmenu' => $trmenu]);
-    }
-        // page 1 tr web
-        public function actionTrainingWeb($lng)
-        {
-            return $this->render('trweb',['lng' => $lng]);
-        }
 
-            // page 2 tr design
-        public function actionTrainingDesign($lng)
-        {
-            return $this->render('trdesign',['lng' => $lng]);
-        }
-
-        // page 3 tr business
-        public function actionTrainingBusiness($lng)
-        {
-            return $this->render('trbusiness',['lng' => $lng]);
-        }
-
-
-    // Marketing main page
-    public function actionMarketing($lng)
-    {
-        $mkmenu = MarketingMenu::getMarketingMenuItems($lng);
-        return $this->render('marketing', ['lng' => $lng,'mkmenu' => $mkmenu]);
-    }
-        // page 1 mk web
-        public function actionMarketingWeb($lng)
-        {
-            return $this->render('mkweb', ['lng' => $lng]);
-        }
-
-        // page 2 mk design
-        public function actionMarketingDesign($lng)
-        {
-            return $this->render('mkdesign', ['lng' => $lng]);
-        }
-
-        // page 3 mk marketing
-        public function actionBusinessMarketing($lng)
-        {
-            return $this->render('mkbusiness', ['lng' => $lng]);
-        }
-    
-    */
-    
     /**
      * Login action.
      *
@@ -186,4 +129,7 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+
+
 }

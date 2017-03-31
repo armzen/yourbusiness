@@ -3,8 +3,8 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 /* @var $this yii\web\View */
 $this->title = 'Your Business';
-
 ?>
+
 <div class="site-index">
 
     <section class="carousel-ka">
@@ -58,8 +58,8 @@ $this->title = 'Your Business';
                 <div class="col-lg-6 text-center">
                     <h2>Training</h2>
                     <div class="thumbnail">
-                        <a href="<?= Url::to(['site/training','lng' => $lng]) ?>">
-                            <img src="/images/web.jpg" class="img-responsive" alt="web"/>
+                        <a href="<?= Url::to(['training/index','lng' => $lng]) ?>">
+                            <img src="/images/<?= $trmenu[0]["trimage"]; ?>" class="img-responsive" alt="web"/>
                         </a>
                         <div class="caption">             
                             <h3><?= Html::encode($trmenu[0]["trhead"]); ?></h3>
@@ -75,8 +75,8 @@ $this->title = 'Your Business';
                 <div class="col-lg-6 text-center">
                     <h2>Marketing</h2>
                     <div class="thumbnail">
-                        <a href="<?= Url::to(['site/marketing', 'lng' => $lng]) ?>">
-                            <img src="images/marketing.jpg" alt="Sample Image">
+                        <a href="<?= Url::to(['marketing/index', 'lng' => $lng]) ?>">
+                            <img src="images/<?= $mkmenu[0]['mkimage'] ?>" alt="Sample Image">
                         </a>
                         <div class="caption">                       
                             <h3><?= Html::encode($mkmenu[0]["mkhead"]); ?></h3>
@@ -129,6 +129,7 @@ $this->title = 'Your Business';
     <!-- End of About -->
 
 </div><!-- site-index -->
+
 <script src="<?php?>"></script>
 <script type="text/javascript">
     $(function() {

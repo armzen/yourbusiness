@@ -1,9 +1,11 @@
 <?php
+/* @var $this yii\web\View */
 use yii\helpers\Url;
 ?>
 
+    <h1>training/index</h1>
 <div>
-    <ul class="training-menu">                                
+    <ul class="training-menu">
         <li>
             <a href="<?= Url::to(['site/training-web', 'lng' => $lng ]) ?>">
                 <?= $trmenu[0]["trlink1"]; ?>
@@ -18,12 +20,9 @@ use yii\helpers\Url;
             <a href="<?= Url::to(['site/training-business','lng' => $lng]) ?>">
                 <?= $trmenu[0]["trlink3"]; ?>
             </a>
-        </li>                                
+        </li>
     </ul>
 </div>
-
-<?php
-    echo '<pre>';
-        print_r($trmenu);
-    echo '</pre>';
-?>
+<p>
+    the file <code><?= __FILE__; ?></code>.
+</p>

@@ -55,30 +55,30 @@ AppAsset::register($this);
                     <b class="caret right-carret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?= Url::to(['site/training', 'lng' => $lng]) ?>">
+                        <li><a href="<?= Url::to(['training/index', 'lng' => $lng]) ?>">
                                 <small>
                                     All Trainings
                                 </small>
                             </a>
                         </li>
                             <li class="divider"></li>
-                            <li><a href="<?= Url::to(['site/training-web', 'lng' => $lng])?>">
+                            <li><a href="<?= Url::to(['training/web', 'lng' => $lng])?>">
                                 <small>
                                     Training Web
                                 </small>
                             </a>
                         </li>
                             <li class="divider"></li>
-                            <li><a href="<?= Url::to(['site/training-design', 'lng' => $lng]) ?>">
+                            <li><a href="<?= Url::to(['training/design', 'lng' => $lng]) ?>">
                                 <small>
                                     Training Design
                                 </small>
                             </a>
                         </li>
                             <li class="divider"></li>
-                            <li><a href="<?= Url::to(['site/training-business', 'lng' => $lng]) ?>">
+                            <li><a href="<?= Url::to(['training/business', 'lng' => $lng]) ?>">
                                 <small>
-                                    Training Link 3
+                                    Training Business
                                 </small>
                             </a>
                         </li>                
@@ -89,14 +89,14 @@ AppAsset::register($this);
                         <b class="caret right-carret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?= Url::to(['site/marketing', 'lng' => $lng]); ?>">
+                        <li><a href="<?= Url::to(['marketing/index', 'lng' => $lng]); ?>">
                                 <small>
                                     Marketing Services
                                 </small>
                             </a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="<?= Url::to(['site/marketing-web', 'lng' => $lng]); ?>">
+                        <li><a href="<?= Url::to(['marketing/web', 'lng' => $lng]); ?>">
                                 <small>
                                     Web Marketing
                                 </small>
@@ -104,14 +104,14 @@ AppAsset::register($this);
                         </li>
                             <li class="divider"></li>
                         <li>
-                            <a href="<?= Url::to(['site/marketing-design', 'lng' => $lng]); ?>">
+                            <a href="<?= Url::to(['marketing/design', 'lng' => $lng]); ?>">
                                 <small>
                                     Design Marketing
                                 </small>
                             </a>
                         </li>
                             <li class="divider"></li>
-                            <li><a href="<?= Url::to(['site/business-marketing' , 'lng' => $lng]); ?>">
+                            <li><a href="<?= Url::to(['marketing/business' , 'lng' => $lng]); ?>">
                                 <small>
                                     Business Marketing
                                 </small>
